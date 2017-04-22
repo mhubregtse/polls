@@ -1,0 +1,49 @@
+{
+    "name": "reflar/polls",
+    "description": "Add polls to your Flarum discussions!",
+    "keywords": [
+        "flarum",
+        "reflar",
+        "discussions",
+        "posts",
+        "polls",
+        "opinions"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Lopez",
+            "email": "ralkage@reflar.email",
+            "homepage": "https://reflar.io"
+        },
+
+        {
+          "name": "Charlie K",
+          "email": "issyrocks12@reflar.email",
+          "homepage": "https://reflar.io"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ReFlar/polls/issues",
+        "source": "https://github.com/ReFlar/polls"
+    },
+    "require": {
+        "flarum/core": "^0.1.0-beta.6"
+    },
+      "autoload": {
+        "psr-4": {
+            "Reflar\\Polls\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "ReFlar Polls",
+            "icon": {
+                "name": "bar-chart",
+                "backgroundColor": "#263238",
+                "color": "#fff"
+            }
+        }
+    }
+}
