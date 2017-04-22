@@ -22,7 +22,7 @@ return [
             $table->text('options');
             $table->text('votes');
             $table->smallInteger('active');
-            $table->smallInteger('numberoptioms')->unsigned();
+            $table->smallInteger('numberoptions')->unsigned();
             $table->smallInteger('timeout')->unsigned();
             $table->smallInteger('multiple')->unsigned();
             $table->smallInteger('voters')->unsigned();
