@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of reflar/user-management.
+ * This file is part of reflar/polls.
  *
  * Copyright (c) ReFlar.
  *
@@ -11,14 +11,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Reflar\Polls;
+namespace Reflar\polls;
 
 use Flarum\Foundation\Application;
 use Illuminate\Contracts\Events\Dispatcher;
 
 return function (Dispatcher $events, Application $app) {
     $events->subscribe(Listeners\AddApiAttributes::class);
+    $events->subscribe(Listeners\AddRelationships::class);
+    $events->subscribe(Listeners\EventHandlers::class);
     $events->subscribe(Listeners\AddClientAssets::class);
-
-    $app->register(Providers\StorageServiceProvider::class);
+    $events->subscribe(Listeners\SaveVotesToDatabase::class);
+    $events->subscribe(Listeners\FilterDiscussionListByHotness::class);
 };
