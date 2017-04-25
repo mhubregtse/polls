@@ -33,7 +33,7 @@
     },
       "autoload": {
         "psr-4": {
-            "Reflar\\Polls\\": "src/"
+            "Reflar\\polls\\": "src/"
         }
     },
     "extra": {
